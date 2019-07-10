@@ -7,10 +7,10 @@ import (
 )
 
 func myHandler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "Hello!!!!\n")
+    fmt.Fprintf(w, "Hello\n")
 }
 
 func main(){
-    http.HandleFunc("/", myHandler)     //  設定訪問路由
+    http.HandleFunc("/", myHandler)     
     log.Fatal(http.ListenAndServe(":8080", nil))
 }
